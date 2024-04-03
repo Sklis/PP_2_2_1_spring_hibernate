@@ -17,6 +17,10 @@ public class Car {
     @Column
     private int series;
 
+    @OneToOne(mappedBy = "car",
+            cascade = CascadeType.ALL)
+    private User user;
+
     public Car() {
     }
 
